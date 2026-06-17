@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ระบบลงชื่อจองทำกิจกรรมเดินป่า พายชมธรรมชาติ กับเขาสกทราเวลทัวร์</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+body{
+    background:#f4f7f4;
+}
+header{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+.slider{
+    width:90%;
+    max-width:1000px;
+    height:800px;
+    margin:25px auto;
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+.slides{
+    display:flex;
+    width:300%;
+    height:100%;
+    animation: slideshow 12s infinite;
+}
+.slides img{
+    width:33.333%;
+    height:100%;
+    object-fit:cover;
+}
+@keyframes slideshow{
+    0%,30%{
+        transform:translateX(0);
+    }
+    33%,63%{
+        transform:translateX(-33.333%);
+    }
+    66%,96%{
+        transform:translateX(-66.666%);
+    }
+    100%{
+        transform:translateX(0);
+    }
+}
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:30px auto;
+}
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+h2{
+    margin-bottom:15px;
+    color:#2e7d32;
+}
+.form-group{
+    margin-bottom:15px;
+}
+label{
+    display:block;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+input, select{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+button{
+    background:#2e7d32;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+button:hover{
+    background:#1b5e20;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+table th,
+table td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+}
+table th{
+    background:#2e7d32;
+    color:white;
+}
+footer{
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+    color:#666;
+}
+</style>
+</head>
+<body>
+<header>
+    <link rel="icon" href="S__12050434.jpg" type="image"
+    <h1>🌲 ระบบลงชื่อจองเดินป่า</h1>
+    <p>กรอกข้อมูลเพื่อจองกิจกรรมเดินป่า พายเรือ และล่องห่วงยาง</p>
+</header>
+<div class="slider">
+    <div class="slides">
+        <img src="./S__12042243.jpg" alt="ล่องห่วงยาง" >
+        <img src="./S__12042244.jpg" alt="กิจกรรมธรรมชาติ" >
+        <img src="./S__12042246.jpg" alt="ไกด์นำเที่ยว" width="100%">
+    </div>
+</div>
+<div class="container">
+    <div class="card" style="margin-bottom:20px;">
+        <h2>🌿 ยินดีต้อนรับสู่เขาสกทราเวลทัวร์</h2>
+        <p>
+            สัมผัสธรรมชาติ ล่องห่วงยาง พายเรือ และเดินป่า
+            กับทีมงานมืออาชีพ พร้อมชมวิวสวย ๆ และกิจกรรมสุดประทับใจ
+        </p>
+    </div>
+    <div class="card">
+        <h2>แบบฟอร์มจองกิจกรรม</h2>
+        <div class="form-group">
+            <label>ชื่อ - นามสกุล</label>
+            <input type="text" id="name">
+        </div>
+        <div class="form-group">
+            <label>เบอร์โทรศัพท์</label>
+            <input type="tel" id="phone">
+        </div>
+        <div class="form-group">
+            <label>เลือกกิจกรรม</label>
+            <select id="trail">
+                <option>อุทยานเขาสก</option>
+                <option>เขื่อนรัชประภา</option>
+                <option>พายเรือชมธรรมชาติ</option>
+                <option>ล่องห่วงยาง</option>
+                <option>ที่พักติดธรรมชาติอื่น ๆ</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>วันที่ทำกิจกรรม</label>
+            <input type="date" id="hikeDate">
+        </div>
+        <div class="form-group">
+            <label>ช่วงเวลา</label>
+            <select id="timeSlot">
+                <option value="">-- เลือกช่วงเวลา --</option>
+                <option>06:00 - 10:00 น.</option>
+                <option>10:00 - 14:00 น.</option>
+                <option>14:00 - 18:00 น.</option>
+                <option>18:00 - 22:00 น.</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>จำนวนผู้ร่วมเดินทาง</label>
+            <input type="number" id="people" min="1" value="1">
+        </div>
+        <button onclick="reserve()">ยืนยันการจอง</button>
+    </div>
+    <div class="card" style="margin-top:20px;">
+        <h2>รายการจอง</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ชื่อ</th>
+                    <th>เบอร์โทร</th>
+                    <th>กิจกรรม</th>
+                    <th>วันที่</th>
+                    <th>ช่วงเวลา</th>
+                    <th>จำนวนคน</th>
+                </tr>
+            </thead>
+            <tbody id="reservationList"></tbody>
+        </table>
+    </div>
+</div>
+<footer>
+    © 2026 Khao Sok Travel Tour
+</footer>
+<script>
+const today = new Date().toISOString().split("T")[0];
+document.getElementById("hikeDate").setAttribute("min", today);
+function reserve() {
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let trail = document.getElementById("trail").value;
+    let hikeDate = document.getElementById("hikeDate").value;
+    let timeSlot = document.getElementById("timeSlot").value;
+    let people = document.getElementById("people").value;
+    if(name === "" || phone === "" || hikeDate === "" || timeSlot === ""){
+        alert("กรุณากรอกข้อมูลให้ครบ");
+        return;
+    }
+    let row = `
+        <tr>
+            <td>${name}</td>
+            <td>${phone}</td>
+            <td>${trail}</td>
+            <td>${hikeDate}</td>
+            <td>${timeSlot}</td>
+            <td>${people}</td>
+        </tr>
+    `;
+    document.getElementById("reservationList")
+    .insertAdjacentHTML("beforeend", row);
+    alert("จองสำเร็จ 🎉");
+    document.getElementById("name").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("hikeDate").value = "";
+    document.getElementById("timeSlot").selectedIndex = 0;
+    document.getElementById("people").value = "1";
+}
+</script>
+</body>
+</html>
