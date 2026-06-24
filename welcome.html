@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ยินดีต้อนรับ | เขาสกทราเวลทัวร์</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+body{
+    background:#eef7ed;
+    color:#234d20;
+}
+header{
+    background:#2e7d32;
+    color:white;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 15px;
+    gap:20px;
+}
+.brand{
+    max-width:720px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:12px;
+    padding:10px 16px;
+    border-radius:10px;
+    background:rgba(255,255,255,0.16);
+    transition:background 0.2s ease;
+}
+nav a:hover{
+    background:rgba(255,255,255,0.28);
+}
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:30px auto;
+}
+.hero{
+    background:#ffffff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.12);
+    text-align:center;
+}
+.hero h1{
+    margin-bottom:15px;
+    font-size:2.5rem;
+}
+.hero p{
+    margin-bottom:25px;
+    line-height:1.8;
+    font-size:1.05rem;
+}
+.hero button{
+    background:#2e7d32;
+    color:white;
+    border:none;
+    padding:14px 28px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:1rem;
+}
+.hero button:hover{
+    background:#1b5e20;
+}
+.features{
+    display:grid;
+    gap:20px;
+    margin-top:30px;
+}
+.feature-card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
+}
+.feature-card h3{
+    margin-bottom:12px;
+    color:#2e7d32;
+}
+footer{
+    text-align:center;
+    padding:18px 15px;
+    margin-top:30px;
+    color:#666;
+}
+@media (max-width:700px) {
+    .hero h1{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="brand">
+        <h1>🌲 ยินดีต้อนรับสู่เขาสกทราเวลทัวร์</h1>
+        <p>จองกิจกรรมเดินป่า พายเรือ และล่องห่วงยางได้อย่างสะดวกและปลอดภัย</p>
+    </div>
+    <nav>
+        <a href="welcome.html">หน้าแรก</a>
+        <a href="index.html">จองกิจกรรม</a>
+        <a href="#activities">กิจกรรม</a>
+    </nav>
+</header>
+<div class="container">
+    <div class="hero">
+        <h1>ท่องเที่ยวธรรมชาติอย่างปลอดภัย</h1>
+        <p>สัมผัสบรรยากาศเขาสก พักผ่อนริมอ่างเก็บน้ำ และสนุกกับกิจกรรมทางน้ำของเรา พร้อมทีมงานมืออาชีพดูแลตลอดเส้นทาง</p>
+        <button onclick="location.href='index.html'">ไปยังแบบฟอร์มจองกิจกรรม</button>
+    </div>
+    <div class="features" id="activities">
+        <div class="feature-card">
+            <h3>กิจกรรมหลากหลาย</h3>
+            <p>เลือกได้ทั้งชมธรรมชาติ เดินป่า พายเรือ ล่องห่วงยาง และที่พักติดธรรมชาติ</p>
+        </div>
+        <div class="feature-card">
+            <h3>สนุกและสะดวก</h3>
+            <p>กรอกข้อมูลเพียงครั้งเดียว แล้วรับการยืนยันการจองทันทีในหน้าจองกิจกรรม</p>
+        </div>
+        <div class="feature-card">
+            <h3>ปลอดภัยและเป็นมิตร</h3>
+            <p>เดินทางกับทีมงานมืออาชีพของเขาสกทราเวลทัวร์ ดูแลลูกค้าทุกคนอย่างเอาใจใส่</p>
+        </div>
+    </div>
+</div>
+<footer>
+    © 2026 Khao Sok Travel Tour
+</footer>
+</body>
+</html>

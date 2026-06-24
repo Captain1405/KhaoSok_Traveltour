@@ -17,8 +17,35 @@ body{
 header{
     background:#2e7d32;
     color:white;
-    text-align:center;
-    padding:25px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    padding:20px;
+}
+header .brand{
+    text-align:left;
+}
+header .brand h1{
+    margin-bottom:8px;
+}
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+}
+nav a{
+    color:#ffffff;
+    text-decoration:none;
+    padding:10px 16px;
+    border-radius:10px;
+    background:rgba(255,255,255,0.16);
+    transition:background 0.2s ease;
+}
+nav a:hover{
+    background:rgba(255,255,255,0.28);
 }
 .slider{
     width:90%;
@@ -95,6 +122,19 @@ button{
 button:hover{
     background:#1b5e20;
 }
+header a{
+    display:inline-block;
+    margin-top:10px;
+    color:#ffffff;
+    text-decoration:none;
+    background:rgba(255,255,255,0.15);
+    padding:10px 18px;
+    border-radius:10px;
+    transition:background 0.2s ease;
+}
+header a:hover{
+    background:rgba(255,255,255,0.25);
+}
 table{
     width:100%;
     border-collapse:collapse;
@@ -120,9 +160,16 @@ footer{
 </head>
 <body>
 <header>
-    <link rel="icon" href="S__12050434.jpg" type="image"
-    <h1>🌲 ระบบลงชื่อจองเดินป่า</h1>
-    <p>กรอกข้อมูลเพื่อจองกิจกรรมเดินป่า พายเรือ และล่องห่วงยาง</p>
+    <link rel="icon" href="S__12050434.jpg" type="image/jpeg">
+    <div class="brand">
+        <h1>🌲 ระบบลงชื่อจองเดินป่า</h1>
+        <p>กรอกข้อมูลเพื่อจองกิจกรรมเดินป่า พายเรือ และล่องห่วงยาง</p>
+    </div>
+    <nav>
+        <a href="welcome.html">หน้าแรก</a>
+        <a href="#booking-form">จองกิจกรรม</a>
+        <a href="#reservation-list">รายการจอง</a>
+    </nav>
 </header>
 <div class="slider">
     <div class="slides">
@@ -139,7 +186,7 @@ footer{
             กับทีมงานมืออาชีพ พร้อมชมวิวสวย ๆ และกิจกรรมสุดประทับใจ
         </p>
     </div>
-    <div class="card">
+    <div class="card" id="booking-form">
         <h2>แบบฟอร์มจองกิจกรรม</h2>
         <div class="form-group">
             <label>ชื่อ - นามสกุล</label>
@@ -179,7 +226,7 @@ footer{
         </div>
         <button onclick="reserve()">ยืนยันการจอง</button>
     </div>
-    <div class="card" style="margin-top:20px;">
+    <div class="card" style="margin-top:20px;" id="reservation-list">
         <h2>รายการจอง</h2>
         <table>
             <thead>
